@@ -1,0 +1,43 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/tools/mixins.scss';
+
+
+.c-button {
+    --btn-padding: 10px 20px;
+    --btn-color: #{$white};
+    --btn-bg-color: #{$grey};
+    --btn-bg-color-hover: #{$darkGrey};
+    
+    max-width: 30rem;
+    padding: var(--btn-padding);
+    font-size: 1.8rem;
+    color: var(--btn-color);
+    border: none;
+    border-radius: 2px;
+    background-color: var(--btn-bg-color);
+    transition: 0.2s all ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--btn-bg-color-hover);
+    }
+
+    &--small {
+        --btn-padding: 5px 15px;
+        font-size: 1.2rem;
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+
+    &--blue {
+        --btn-bg-color: #{$blue};
+        --btn-bg-color-hover: #{$darkBlue};
+    }
+
+    &--crimson {
+        --btn-bg-color: #{$crimson};
+        --btn-bg-color-hover: #{$darkCrimson};
+    }
+}

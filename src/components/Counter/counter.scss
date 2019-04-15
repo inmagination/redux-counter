@@ -1,0 +1,51 @@
+@import '../../styles/settings/variables.scss';
+@import '../../styles/tools/mixins.scss';
+
+.counter {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 20rem;
+    height: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+
+    border: 15px solid #26113F;
+    border-radius: 5px;
+    background-image: linear-gradient(to top, #330867 0%, #30cfd0 100%);  
+    box-shadow: 10px 10px 5px 0px rgba(50, 50, 50, 0.2); 
+    
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;        
+        left: 0;
+        width: 10rem;
+        height: 0;
+        border-bottom: 27rem solid $white;
+        border-right: 8rem solid transparent;
+        opacity: 0.2;
+        pointer-events: none;
+    }
+
+    &__number {
+        font-size: 12rem;
+        color: $white;
+    }    
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+    }
+
+    &__reset {
+        grid-column: span 2; 
+    }
+
+    .c-button {
+        box-shadow: 4px 4px 2px 0px rgba(50, 50, 50, 0.6);  
+    }
+}
